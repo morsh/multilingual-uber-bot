@@ -1,0 +1,24 @@
+{
+  "name": "multilingual-uber-bot",
+  "version": "1.0.0",
+  "description": "Multilingual, context switching bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morsh/multilingual-uber-bot.git"
+  },
+  "author": "mor shemesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morsh/multilingual-uber-bot/issues"
+  },
+  "homepage": "https://github.com/morsh/multilingual-uber-bot#readme",
+  "dependencies": {
+    "botbuilder": "^3.4.4",
+    "nconf": "^0.8.4",
+    "restify": "^4.3.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "BOT_MicrosoftAppId": "00000000-0000-0000-0000-000000000000",
+  "BOT_MicrosoftAppPassword": "***********************",
+  "LUIS_modelBaseURL":"https://api.projectoxford.ai/luis/v1/application",
+  "LUIS_applicationId_en":"00000000-0000-0000-0000-000000000000",
+  "LUIS_applicationId_he":"00000000-0000-0000-0000-000000000000",
+  "LUIS_applicationId_es":"00000000-0000-0000-0000-000000000000",
+  "LUIS_subscriptionKey":"********************************"
+}
