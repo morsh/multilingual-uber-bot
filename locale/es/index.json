@@ -1,0 +1,9 @@
+{
+  "welcome-message": "Bienvenido",
+  "locale-home": "mensaje a casa",
+  "conversation-end": "la conversación ha terminado",
+  "master-dialog-done": "el diálogo ha terminado",
+  "what-to-do": "¿Que te gustaría hacer?",
+
+  "languageLibrary:language-change-success": "cambio de idioma es un éxito"
+}

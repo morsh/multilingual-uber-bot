@@ -4,7 +4,6 @@ var LOCALE_VAR = 'BotBuilder.Data.PreferredLocale';
 var LANGUAGES = [];
 LANGUAGES['English'] = 'en';
 LANGUAGES['Español'] = 'es';
-LANGUAGES['עברית'] = 'he';
 
 var languageLibrary = (function () {
 
@@ -13,7 +12,7 @@ var languageLibrary = (function () {
 
     _lib.dialog('change', [
         function (session, args, next) {
-            session.send('Please choose a language \n\n Por favor, elige un idioma \n\n בחר שפה בבקשה');
+            session.send('Please choose a language \n\n Por favor, elige un idioma');
             builder.Prompts.choice(session, '', Object.keys(LANGUAGES));
         },
         function (session, results, next) {

@@ -33,7 +33,7 @@ var bot = new builder.UniversalBot(connector, {
 });
 server.post('/api/messages', connector.listen());
 
-bot.endConversationAction('cancel', 'conversation-end', { matches: /^(cancel|cancelar|ביטול)/i });
+bot.endConversationAction('cancel', 'conversation-end', { matches: /^(cancel|cancelar)/i });
 
 // Adding language change library to bot 
 bot.library(languageLibrary.createLibrary(bot));
@@ -56,13 +56,13 @@ bot.use({
 
             // Find the corresponding bot
             var goBot = bots.find(function (bot) {
-                return ('go ' + bot.getName().toLowerCase() == message);
+                return ('go ' + bot.getName(session).toLowerCase() == message);
             });
 
             if (goBot) {
 
                 // This will ensure that the next bot will be the one requested
-                session.conversationData.nextBot = goBot.getName();
+                session.conversationData.nextBot = goBot.getName(session);
                 restartDialog = true;
             } else {
                 next();
@@ -102,7 +102,7 @@ var intents = new builder.IntentDialog();
 bot.dialog('/', intents);
 
 intents.matches(/^(home|menu)/i, "*:home");
-intents.matches(/^(change language|language)/i, [languageLibrary.changeLocale]);
+intents.matches(/^(change language|language|cambiar idioma|idioma)/i, [languageLibrary.changeLocale]);
 
 bot.dialog('home', [
     function (session, results) {
