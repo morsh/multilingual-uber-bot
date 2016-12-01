@@ -42,7 +42,7 @@ You can perform this scenario in english or spanish:
 
 This enters the context of history bot and remains there until you type either 'go home' or 'cancel'.
 
-# Context Switching
+## Context Switching
 
 * Type: history
 * Type: go feedback
