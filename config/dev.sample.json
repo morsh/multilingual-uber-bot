@@ -1,8 +1,8 @@
 {
-  "BOT_MicrosoftAppId": "00000000-0000-0000-0000-000000000000",
-  "BOT_MicrosoftAppPassword": "***********************",
+  "BOT_MicrosoftAppId": "",
+  "BOT_MicrosoftAppPassword": "",
   "LUIS_modelBaseURL":"https://api.projectoxford.ai/luis/v1/application",
-  "LUIS_applicationId_en":"00000000-0000-0000-0000-000000000000",
-  "LUIS_applicationId_es":"00000000-0000-0000-0000-000000000000",
-  "LUIS_subscriptionKey":"********************************"
+  "LUIS_applicationId_en":"a0a68090-8dd2-4dde-96f8-d5d6517cee32",
+  "LUIS_applicationId_es":"b793dd65-7bc1-40fe-920d-497063d35497",
+  "LUIS_subscriptionKey":"d7b46a6c72bf46c1b67f2c4f21acf960"
 }

@@ -18,9 +18,15 @@ var feedbackBot = (function () {
       }
   ]);
 
-  _lib.dialog('history', [
+  _lib.dialog('info', [
     function (session, results) {
         session.endDialog("history-details");
+    }
+  ]);
+
+  _lib.dialog('goback', [
+    function (session, results) {
+        session.endDialog("history-goback");
     }
   ]);
 
@@ -41,10 +47,12 @@ var feedbackBot = (function () {
     // Create LUIS recognizer that points at our model for selected locale
     model = config.get('LUIS_modelBaseURL')+"?id="+config.get('LUIS_applicationId_' + locale)+"&subscription-key="+config.get('LUIS_subscriptionKey')+"&q=";
 
-    intents = new builder.IntentDialog();
+    var recognizer = new builder.LuisRecognizer(model);
+    intents = new builder.IntentDialog({ recognizers: [recognizer] });
     intents.onDefault("historyBot:/")
-    intents.matches(/^(history|היסטוריה)/i, "historyBot:history");
-    // .onDefault(builder.DialogAction.send("I'm sorry. I didn't understand."))
+    intents.matches('history.info', "historyBot:info");
+    intents.matches('history.goback', "historyBot:goback");
+    
     return intents;
   };
 

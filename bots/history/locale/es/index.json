@@ -1,5 +1,6 @@
 {
   "history-name": "historia",
-  "history-welcome": "escribir la 'historia' de escuchar acerca de la historia",
-  "history-details": "Yo te hablan de la historia..."
+  "history-welcome": "Intenta 'cuéntame sobre la historia' o 'vuelve a 2001'",
+  "history-details": "Yo te hablan de la historia...",
+  "history-goback": "Retroceder en el tiempo..."
 }

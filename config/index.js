@@ -8,7 +8,8 @@
 var nconf = require('nconf');
 var path = require('path');
 
+var sampleFile = path.join(__dirname, 'dev.sample.json');
 var envFile = path.join(__dirname, 'dev.private.json');
-var config = nconf.env().file({ file: envFile });
+var config = nconf.env().file({ file: sampleFile }).file({ file: envFile });
 
 module.exports = config;
