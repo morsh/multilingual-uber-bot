@@ -34,20 +34,20 @@ Try one of the following Scenarios
 
 You can perform this scenario in english or spanish:
 
-> Type: Change languages
-> Type: English
-> Type: history
-> Type: Tell me about Einstein
-> Type: Go back to 1983
+* Type: Change languages
+* Type: English
+* Type: history
+* Type: Tell me about Einstein
+* Type: Go back to 1983
 
 This enters the context of history bot and remains there until you type either 'go home' or 'cancel'.
 
 # Context Switching
 
-> Type: history
-> Type: go feedback
-> Type: go home
-> Type: history
-> Type: cancel
+* Type: history
+* Type: go feedback
+* Type: go home
+* Type: history
+* Type: cancel
 
 This is an example of both switching between bots and ending a current bot conversation and going up to the upper level.
