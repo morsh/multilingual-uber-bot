@@ -10,6 +10,8 @@ For a full description of this case study [click here](https://www.microsoft.com
 
 # Execution
 
+Run `npm start`.
+
 You can run this sample locally as is and communicate with it using [bot emulator](https://docs.botframework.com/en-us/tools/bot-framework-emulator/).
 You can also connect this bot to your own registered bot by copying the file `config/dev.sample.json` to `config/dev.private.json`
 
@@ -25,6 +27,10 @@ and change:
   "LUIS_subscriptionKey":"<You can use as is or replace with your own LUIS subscription id>"
 }
 ``` 
+
+## Testing
+
+Run `npm test`.
 
 # Scenarios
 
