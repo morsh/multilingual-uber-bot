@@ -1,0 +1,8 @@
+{
+  "BOT_MicrosoftAppId": "",
+  "BOT_MicrosoftAppPassword": "",
+  "LUIS_modelBaseURL":"https://luis.url",
+  "LUIS_applicationId_en":"en",
+  "LUIS_applicationId_es":"es",
+  "LUIS_subscriptionKey":"subId"
+}
