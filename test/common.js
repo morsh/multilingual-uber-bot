@@ -2,8 +2,8 @@ var assert = require('assert');
 var nock = require('nock');
 
 function setup() {
-  var englishModel = '/?id=en&subscription-key=subId&q=';
-  var spanishModel = '/?id=es&subscription-key=subId&q=';
+  var englishModel = '/en?subscription-key=subId&q=';
+  var spanishModel = '/es?subscription-key=subId&q=';
   nock('https://luis.url')
     .get(englishModel + encodeURIComponent('go back to 2009'))
     .reply(200, {
@@ -99,5 +99,9 @@ function testBot(bot, messages, done) {
 
 module.exports = {
   setup,
-  testBot
+  testBot,
+  fakeInstrumentation: {
+    monitor: function () {},
+    trackGoalTriggeredEvent: function() {}
+  }
 };
