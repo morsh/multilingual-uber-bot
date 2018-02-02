@@ -19,6 +19,8 @@
   "homepage": "https://github.com/morsh/multilingual-uber-bot#readme",
   "dependencies": {
     "botbuilder": "^3.4.4",
+    "botbuilder-azure": "^3.0.4",
+    "botbuilder-instrumentation": "^1.1.16",
     "nconf": "^0.8.4",
     "restify": "^4.3.0"
   },

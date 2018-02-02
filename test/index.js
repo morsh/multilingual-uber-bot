@@ -12,9 +12,10 @@ common.setup();
 //Our parent block
 describe('Bot Tests', () => {
 
-  it('should recognize ahistory intents', function (done) { 
+  it('should recognize history intents', function (done) { 
       var connector = new builder.ConsoleConnector();
-      var bot = uberBot.create(connector);
+      var inMemoryStorage = new builder.MemoryBotStorage();
+      var bot = uberBot.create(connector, inMemoryStorage, common.fakeInstrumentation);
 
       common.testBot(bot, historyMessages, done);
       
@@ -23,8 +24,9 @@ describe('Bot Tests', () => {
 
   it('context switching', function (done) { 
       var connector = new builder.ConsoleConnector();
+      var inMemoryStorage = new builder.MemoryBotStorage();
+      var bot = uberBot.create(connector, inMemoryStorage, common.fakeInstrumentation);       
 
-      var bot = uberBot.create(connector);       
       common.testBot(bot, switchingMessages, done);
       
       connector.processMessage('hi');

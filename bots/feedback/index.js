@@ -14,13 +14,13 @@ var feedbackBot = (function () {
   _lib.localePath('./bots/feedback/locale/');
   _lib.dialog('/', [
       function (session, results, next) {
-          session.endDialog("feedback-welcome");
+          session.endDialog("welcome");
       }
   ]);
 
   _lib.dialog('feedback', [
       function (session, results) {
-          session.endDialog('feedback-message');
+          session.endDialog('message');
       }
   ]);
 
@@ -29,23 +29,27 @@ var feedbackBot = (function () {
   }
 
   function getName (session) { 
-    return session.localizer.gettext(session.preferredLocale(), "feedback-name");
+    return session.localizer.gettext(session.preferredLocale(), "name", _lib.name);
   }
 
   function welcomeMessage (session) {
-      return session.localizer.gettext(session.preferredLocale(), "feedback-welcome");
+      return session.localizer.gettext(session.preferredLocale(), "welcome", _lib.name);
   }
 
   function initialize (locale) {
 
       // Create LUIS recognizer that points at our model for selected locale
-      model = config.get('LUIS_modelBaseURL')+"?id="+config.get('LUIS_applicationId_' + locale)+"&subscription-key="+config.get('LUIS_subscriptionKey')+"&q=";
+      model = config.get('LUIS_modelBaseURL')+"/"+config.get('LUIS_applicationId_' + locale)+"?subscription-key="+config.get('LUIS_subscriptionKey')+"&q=";
       
-      intents = new builder.IntentDialog();
+      var recognizer = new builder.LuisRecognizer(model);
+      intents = new builder.IntentDialog({ recognizers: [recognizer] });
       intents.onDefault("feedbackBot:/");
-      intents.matches(/^(feedback|משוב)/i, "feedbackBot:feedback");
-      // .onDefault(builder.DialogAction.send("I'm sorry. I didn't understand."))
-      return intents;
+      intents.matches('feedback', "feedbackBot:feedback");
+      
+      return {
+        intents: intents,
+        recognizer: recognizer
+      };
   };
 
   return {

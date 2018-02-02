@@ -1,6 +1,6 @@
 {
-  "BOT_MicrosoftAppId": "",
-  "BOT_MicrosoftAppPassword": "",
+  "MicrosoftAppId": "",
+  "MicrosoftAppPassword": "",
   "LUIS_modelBaseURL":"https://luis.url",
   "LUIS_applicationId_en":"en",
   "LUIS_applicationId_es":"es",

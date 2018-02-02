@@ -1,0 +1,184 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "UberBot ES",
+  "desc": "",
+  "culture": "es-es",
+  "intents": [
+    {
+      "name": "feedback"
+    },
+    {
+      "name": "history.goback"
+    },
+    {
+      "name": "history.info"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "dame información",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "opinión",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "dame tu opinión",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "necesito saber tu opinión",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "comentarios",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "dame comentarios",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "dime comentarios",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "dime tus comentarios",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "dime tu opinión",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "necesito tus comentarios",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "coméntame",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "información",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "infórmame",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "necesito info",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "necesito información",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "puedes darme información?",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "que info puedes compartir conmigo?",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "vamos hacia detrás en el tiempo",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "viajemos un poco en el tiempo",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "viajemos en el tiempo",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "vayamos atrás en el tiempo",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "vayamos atrás",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "un poco más atrás",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "dime algo del pasado",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "retroalimentación",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "retroalimentar",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "cuéntame sobre la historia",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "cuéntame algo sobre historia",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "historia",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "dame información sobre historia",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "vuelve a 2001",
+      "intent": "history.goback",
+      "entities": []
+    }
+  ]
+}
