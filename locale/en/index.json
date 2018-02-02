@@ -3,7 +3,5 @@
   "locale-home": "Home message",
   "conversation-end": "The conversation has ended",
   "master-dialog-done": "Dialog is done",
-  "what-to-do": "What bot do you want?",
-
-  "languageLibrary:language-change-success": "Language change was successfull"
+  "what-to-do": "What bot do you want?"
 }

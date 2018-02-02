@@ -19,9 +19,11 @@ and change:
 
 ```json
 {
-  "BOT_MicrosoftAppId": "<GUID for registered bot id>",
-  "BOT_MicrosoftAppPassword": "<Password for registered bot>",
-  "LUIS_modelBaseURL":"https://api.projectoxford.ai/luis/v1/application",
+  "MicrosoftAppId": "<GUID for registered bot id>",
+  "MicrosoftAppPassword": "<Password for registered bot>",
+  "COSMOSDB_host": "<Replace with the Url for your own CosmosDB>",
+  "COSMOSDB_key": "<Replace with a key for your own CosmosDB>",
+  "LUIS_modelBaseURL":"https://westeurope.api.cognitive.microsoft.com/luis/v2.0/apps",
   "LUIS_applicationId_en":"<You can use as is or replace with a LUIS app id for your own english model>",
   "LUIS_applicationId_es":"<You can use as is or replace with a LUIS app id for your own spanish model>",
   "LUIS_subscriptionKey":"<You can use as is or replace with your own LUIS subscription id>"

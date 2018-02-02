@@ -1,8 +1,12 @@
 {
-  "BOT_MicrosoftAppId": "",
-  "BOT_MicrosoftAppPassword": "",
-  "LUIS_modelBaseURL":"https://api.projectoxford.ai/luis/v1/application",
+  "MicrosoftAppId": "",
+  "MicrosoftAppPassword": "",
+  "COSMOSDB_host": "https://mycosmosdb.documents.azure.com:443/",
+  "COSMOSDB_key": "67ITy8OF0EfCtSVgAJWxGwghqHhAcwSwCx3VqUSPo2mO75z9o6sRcBJmuBSNFZzp8oTCAslfAFRQpXyv2zdyDA==",
+  "LUIS_modelBaseURL":"https://westeurope.api.cognitive.microsoft.com/luis/v2.0/apps",
   "LUIS_applicationId_en":"a0a68090-8dd2-4dde-96f8-d5d6517cee32",
   "LUIS_applicationId_es":"b793dd65-7bc1-40fe-920d-497063d35497",
-  "LUIS_subscriptionKey":"d7b46a6c72bf46c1b67f2c4f21acf960"
+  "LUIS_subscriptionKey":"d7b46a6c72bf46c1b67f2c4f21acf960",
+  "BotDevAppInsightsKey":"3434be39-3249-4f2f-3b1d-96467f3343ff",
+  "SENTIMENT_subscriptionkey":"52f0a61a4bc24f0f96628a3eb1834a1d"
 }

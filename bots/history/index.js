@@ -5,7 +5,7 @@ var config = require('../../config');
 // Library creation
 //=========================================================
 
-var feedbackBot = (function () {
+var historyBot = (function () {
 
   var model;
   var recognizer;
@@ -14,19 +14,19 @@ var feedbackBot = (function () {
   _lib.localePath('./bots/history/locale/');
   _lib.dialog('/', [
       function (session, results, next) {
-          session.endDialog("history-welcome");
+          session.endDialog("welcome");
       }
   ]);
 
   _lib.dialog('info', [
     function (session, results) {
-        session.endDialog("history-details");
+        session.endDialog("details");
     }
   ]);
 
   _lib.dialog('goback', [
     function (session, results) {
-        session.endDialog("history-goback");
+        session.endDialog("goback");
     }
   ]);
 
@@ -35,17 +35,17 @@ var feedbackBot = (function () {
   }
 
   function getName (session) { 
-    return session.localizer.gettext(session.preferredLocale(), "history-name");
+    return session.localizer.gettext(session.preferredLocale(), "name", _lib.name);
   }
 
   function welcomeMessage (session) {
-      return session.localizer.gettext(session.preferredLocale(), "history-welcome");
+      return session.localizer.gettext(session.preferredLocale(), "welcome", _lib.name);
   }
 
   function initialize (locale) {
 
     // Create LUIS recognizer that points at our model for selected locale
-    model = config.get('LUIS_modelBaseURL')+"?id="+config.get('LUIS_applicationId_' + locale)+"&subscription-key="+config.get('LUIS_subscriptionKey')+"&q=";
+    model = config.get('LUIS_modelBaseURL')+"/"+config.get('LUIS_applicationId_' + locale)+"?subscription-key="+config.get('LUIS_subscriptionKey')+"&q=";
 
     var recognizer = new builder.LuisRecognizer(model);
     intents = new builder.IntentDialog({ recognizers: [recognizer] });
@@ -53,7 +53,10 @@ var feedbackBot = (function () {
     intents.matches('history.info', "historyBot:info");
     intents.matches('history.goback', "historyBot:goback");
     
-    return intents;
+    return {
+      intents: intents,
+      recognizer: recognizer
+    };
   };
 
   return {
@@ -65,4 +68,4 @@ var feedbackBot = (function () {
 
 })();
 
-module.exports = feedbackBot;
+module.exports = historyBot;

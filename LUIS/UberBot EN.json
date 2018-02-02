@@ -1,0 +1,149 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "UberBot EN",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "feedback"
+    },
+    {
+      "name": "history.goback"
+    },
+    {
+      "name": "history.info"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "info",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "i need information",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "go back",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "feedback",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "information",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "i need feedback",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "give me some feedback",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "can you give me some feedback please?",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "feedback required",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "history info",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "history information",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "information history",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "give me information",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "i need info",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "go back in time",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "go back in history",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "let's travel back in time",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "go back a few years",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "please go back",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "let's remember",
+      "intent": "history.goback",
+      "entities": []
+    },
+    {
+      "text": "i want some information",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "tell me something about history",
+      "intent": "history.info",
+      "entities": []
+    },
+    {
+      "text": "i love feedback!",
+      "intent": "feedback",
+      "entities": []
+    },
+    {
+      "text": "tell me about history",
+      "intent": "history.info",
+      "entities": []
+    }
+  ]
+}

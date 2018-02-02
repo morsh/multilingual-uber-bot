@@ -12,8 +12,7 @@ var languageLibrary = (function () {
 
     _lib.dialog('change', [
         function (session, args, next) {
-            session.send('Please choose a language \n\n Por favor, elige un idioma');
-            builder.Prompts.choice(session, '', Object.keys(LANGUAGES));
+            builder.Prompts.choice(session, 'Please choose a language \n\n Por favor, elige un idioma', Object.keys(LANGUAGES), { listStyle: builder.ListStyle.button });
         },
         function (session, results, next) {
             session.userData[LOCALE_VAR] = LANGUAGES[results.response.entity];
@@ -21,7 +20,7 @@ var languageLibrary = (function () {
             session.preferredLocale(session.userData[LOCALE_VAR]);
             _bot.settings.localizerSettings.defaultLocale = session.preferredLocale();
 
-            session.send('languageLibrary:language-change-success');
+            session.send('language-change-success');
             session.endDialog();
         }
     ]);
